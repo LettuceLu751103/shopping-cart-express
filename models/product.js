@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
           model: models.CartItem, unique: false
         },
         foreignKey: 'ProductId'
-      })
+      });
       Product.belongsToMany(models.Order, {
         as: 'orders',
         through: {
